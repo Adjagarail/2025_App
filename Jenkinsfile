@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'develop', url: 'https://github.com/Adjagarail/THE_VOD.git'
+                git branch: 'develop', url: 'https://github.com/Adjagarail/2025_App.git'
             }
         }
 
@@ -34,14 +34,14 @@ pipeline {
 
         stage('Install Frontend') {
             steps {
-                sh 'cd vod_front && npm install'
+                sh 'cd appli_front && npm install'
             }
         }
 
         stage('Analyse Frontend (SonarQube)') {
             steps {
                 withSonarQubeEnv("${SONARQUBE_SERVER}") {
-                    sh 'cd vod_front && npx sonar-scanner -Dproject.settings=sonar-project.properties'
+                    sh 'cd appli_front && npx sonar-scanner -Dproject.settings=sonar-project.properties'
                 }
             }
         }

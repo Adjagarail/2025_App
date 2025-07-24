@@ -1,0 +1,26 @@
+# Symfony
+/vendor/
+/var/
+/.env.local
+.env.test.local
+.env.dev.local
+.env.prod.local
+
+# Docker volumes
+docker/db_data/
+docker/jenkins_data/
+docker/rabbitmq_data/
+
+# Logs & Cache
+appli_back/var/
+appli_back/vendor/
+appli_back/.phpunit.result.cache
+
+# Node
+appli_front/node_modules/
+appli_front/dist/
+appli_front/.env.local
+
+# IDEs
+.idea/
+.vscode/
